@@ -1,6 +1,39 @@
 <?php
-session_start();
-session_destroy();
-if(!isset($_SESSION['user_id'])) header('Location:login.php');
-else header('Location:dashboard.php');
+
+    require 'core.php';
+    require 'connect.php';
+
+    if(loggedin()){
+        $firstname = getuserfield('firstname', $mysql_connect);
+        $surname = getuserfield('surname', $mysql_connect);
+
+        echo 'You\'re logged in, '.$firstname.' '.$surname;
+    }else{
+        include 'login.php';
+    }
+
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style type="text/css">
+        body{
+            background-image:url(5.jpg);
+            background-repeat:no-repeat;
+        }
+    </style>
+
+</head>
+<body>
+    
+    
+
+    <br><a href = "logout.php">logout</a>
+
+</body>
+</html>
