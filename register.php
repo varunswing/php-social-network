@@ -1,7 +1,7 @@
 <?php
 
     require 'connect.php';
-    require 'core.inc.php';
+    require 'core.php';
 
     if(!loggedin()){
 
