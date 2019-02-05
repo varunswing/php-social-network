@@ -28,8 +28,8 @@
 ?>
 
 <form action="<?php echo $current_file; ?>" method="POST">
-Username: <input type="text" placeholder="Username..." name="username">
-Passowrd: <input type="password" placeholder="Password..." name="password">
+Username: <input type="text" placeholder="Username..." name="username"><br><br>
+Passowrd: <input type="password" placeholder="Password..." name="password"><br><br>
 <input type="submit" value="Log in">
 </form>
 
