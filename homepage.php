@@ -12,7 +12,11 @@
             if(strlen($title)>255 || strlen($body)>1000){
                 echo 'Please ahear to maxlength of fields.';
             }else{
-                $query = "INSERT INTO posts VALUES('', '1', '$title', '$body')";
+                $query = "INSERT INTO posts VALUES('', '', '$title', '$body')";
+                if($query_run=mysqli_query($mysql_connect, $query)){
+                    echo $title;
+                    echo "<br> $body";
+                }
             }
         }else{
             echo 'All fields are required.';
