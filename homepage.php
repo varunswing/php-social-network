@@ -3,26 +3,29 @@
     require 'connect.php';
     require 'core.php';
 
-    if(isset($_POST['title']) && isset($_POST['body'])){
+    if(loggedin()){
+        if(isset($_POST['title']) && isset($_POST['body'])){
 
-        $title =  mysqli_real_escape_string ($mysql_connect, $_POST['title']);
-        $body =  mysqli_real_escape_string ($mysql_connect, $_POST['body']);
-        
-        if(!empty($title) && !empty($body)){
-            if(strlen($title)>255 || strlen($body)>1000){
-                echo 'Please ahear to maxlength of fields.';
-            }else{
-                $query = "INSERT INTO posts VALUES('', '', '$title', '$body')";
-                if($query_run=mysqli_query($mysql_connect, $query)){
-                    echo $title;
-                    echo "<br> $body";
+            $title =  mysqli_real_escape_string ($mysql_connect, $_POST['title']);
+            $body =  mysqli_real_escape_string ($mysql_connect, $_POST['body']);
+            
+            if(!empty($title) && !empty($body)){
+                if(strlen($title)>255 || strlen($body)>1000){
+                    echo 'Please ahear to maxlength of fields.';
+                }else{
+                    $query = "INSERT INTO posts VALUES('', '1', '$title', '$body')";
+                    if($query_run=mysqli_query($mysql_connect, $query)){
+                        echo $title;
+                        echo "<br> $body";
+                    }
                 }
+            }else{    
+                echo 'All fields are required.';
             }
-        }else{
-            echo 'All fields are required.';
         }
+    }else{
+        echo 'Please log in first.';
     }
-
 ?>
 
 <!DOCTYPE html>
