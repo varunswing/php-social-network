@@ -8,16 +8,18 @@
 
             $title =  mysqli_real_escape_string ($mysql_connect, $_POST['title']);
             $body =  mysqli_real_escape_string ($mysql_connect, $_POST['body']);
+            $session = $_SESSION['user_id'];
             
             if(!empty($title) && !empty($body)){
                 if(strlen($title)>255 || strlen($body)>1000){
                     echo 'Please ahear to maxlength of fields.';
                 }else{
-                    $query = "INSERT INTO posts VALUES('', '1', '$title', '$body')";
+                    $query = "INSERT INTO posts VALUES('', '$session', '$title', '$body')";
                     if($query_run=mysqli_query($mysql_connect, $query)){
-                        echo $title;
-                        echo "<br> $body";
-                    }
+                        header('Location: post_success.php');
+                    }else{
+                        echo 'Sorry, we couldn\'t post at this time. Try again Later.';
+                    }                    
                 }
             }else{    
                 echo 'All fields are required.';
@@ -40,7 +42,8 @@
 
 <form action="homepage.php" method="POST">
     Title:<br><textarea name="title" id="" cols="10" rows="1" placeholder="Title..." maxlength="255"></textarea><br><br>
-    Post:<br><textarea name="body" id="" cols="25" rows="10" placeholder="Content of your post..." maxlength="1000"></textarea><br><br>
+    Post:<br><textarea name="body" id="" cols="25" rows="10" placeholder="Content of your post..." maxlength="1000"></textarea>
+    <input type="file" value="Post"><br><br>
     <input type="submit" value="Post">
 </form>
     
