@@ -8,6 +8,8 @@
         $surname = getuserfield('surname', $mysql_connect);
 
         echo 'You\'re logged in, '.$firstname.' '.$surname;
+        echo '.<br>Now you can <a href="homepage.php">Post</a> your views.<br>';
+        
     }else{
         include 'login.php';
     }
@@ -24,6 +26,7 @@
 </head>
 <body>
 
+    
     <br><a href = "logout.php">logout</a>
 
 </body>
