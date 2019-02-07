@@ -40,14 +40,14 @@
                         }
 
                     }
-            }
-        }else{
+                }
+            }else{
             echo 'All fields are required.';
+            }
         }
-    }
-}else{
+    }else{
     echo 'You\'ve already registered and logged in.';
-}
+    }
 
 ?>
 
