@@ -27,6 +27,7 @@
                         
                         $query = "SELECT username FROM users WHERE username='$username'";
                         $query_run = mysqli_query($mysql_connect, $query);
+                        if(!$query_run) echo("Query Failed!");
 
                         if(mysqli_num_rows($query_run)==1){
                             echo 'The username '.$username.' already exists.';
