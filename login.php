@@ -7,7 +7,7 @@
         $password_hash =  mysqli_real_escape_string ($mysql_connect, md5($password));
 
         if(!empty($username) && !empty($password)){
-            $query = "SELECT id FROM users WHERE username ='$username' AND password = '$password' "; //error can be in comma.
+            $query = "SELECT id FROM users WHERE username ='$username' AND password = '$password' "; 
             if($query_run = mysqli_query($mysql_connect, $query)){
                 $query_num_rows = mysqli_num_rows($query_run);
 
@@ -34,7 +34,7 @@ Passowrd: <input type="password" placeholder="Password..." name="password"><br><
 </form>
 
 <?php
-
+    echo 'Didn\'t have a account.<br>';
     echo '<a href = "register.php">Create new account </a>';
 
 
