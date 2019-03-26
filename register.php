@@ -9,7 +9,7 @@
 
             $username =  mysqli_real_escape_string ($mysql_connect, $_POST['username']);
             $password =  mysqli_real_escape_string ($mysql_connect, $_POST['password']);
-            $password_again =  mysqli_real_escape_string ($mysql_connect, $_POST['password_again']); //can have error here.
+            $password_again =  mysqli_real_escape_string ($mysql_connect, $_POST['password_again']); //Can have error here.
             $password_hash =  mysqli_real_escape_string ($mysql_connect, md5($password)); 
             
             
@@ -25,17 +25,21 @@
                         echo 'Password do not match!';
                     }else{
                         
-                        $query = "SELECT username FROM users WHERE username='$username'";
+                        $query = "SELECT `username` FROM `users` WHERE `username`='$username'";
                         $query_run = mysqli_query($mysql_connect, $query);
-                        if(!$query_run) echo("Query Failed!");
+                        if(!$query_run){
+                            echo("Query Failed!");
+                            echo("<b>Query Error:</b> ". mysqli_error($mysql_connect));
+                        }
 
                         if(mysqli_num_rows($query_run)==1){
                             echo 'The username '.$username.' already exists.';
                         }else{
-                            $query = "INSERT INTO users VALUES('', '$username', '$password', '$firstname', '$surname', '$email') ";
+                            $query = "INSERT INTO users(username, password, firstname, surname, email) VALUES('$username', '$password', '$firstname', '$surname', '$email') ";
                             if($query_run=mysqli_query($mysql_connect, $query)){
                                 header('Location: registration_success.php');
                             }else{
+                                echo(mysqli_error($mysql_connect));
                                 echo 'Sorry, we couldn\'t register you at this time. Try again Later.';
                             }
                         }
