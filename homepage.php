@@ -14,7 +14,7 @@
                 if(strlen($title)>255 || strlen($body)>1000){
                     echo 'Please ahear to maxlength of fields.';
                 }else{
-                    $query = "INSERT INTO posts VALUES('', '$session', '$title', '$body')";
+                    $query = "INSERT INTO posts(id, title, body) VALUES('$session', '$title', '$body')";
                     if($query_run=mysqli_query($mysql_connect, $query)){
                         header('Location: post_success.php');
                     }else{
@@ -37,6 +37,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+     <style type="text/css">
+        body {background-color:green;}
+    </style>
 </head>
 <body>
 
