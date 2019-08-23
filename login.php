@@ -28,14 +28,10 @@
 ?>
 
 <form action="<?php echo $current_file; ?>" method="POST">
-Username: <input type="text" placeholder="Username..." name="username"><br><br>
-Passowrd: <input type="password" placeholder="Password..." name="password"><br><br>
-<input type="submit" value="Log in">
+<h1 style="text-align:center;" >Login Page</h1>
+<p style="text-align:left;"> Username:<input type="text" placeholder="Username..." name="username"> </p>
+<p style="text-align:left;">Passowrd: <input type="password" placeholder="Password..." name="password"><br><br>
+<p style="text-align:left;"><input type="submit" value="Log in">
+<h6 style="text-align:left;">Didn't have an account</h6>
+<h6 style="text-align:left;"><a href="register.php" style="text-decoration:none;">Create new account </a></h6>
 </form>
-
-<?php
-    echo 'Didn\'t have a account.<br>';
-    echo '<a href = "register.php">Create new account </a>';
-
-
-?>
