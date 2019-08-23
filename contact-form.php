@@ -1,5 +1,9 @@
 <?php
 
+require 'connect.php';
+require 'core.php';
+
+
     if(loggedin()){
         if(isset($_POST['contact_name']) && isset($_POST['contact_email']) && isset($_POST['contact_text'])){
             $contact_name = $_POST['contact_name'];
