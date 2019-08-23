@@ -62,10 +62,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" />
     <title>Document</title>
 </head>
-<body>
-
+<body style="background-color:lawngreen">
+<h1 style="text-align:center;">Registration Page</h1>
 <form action="register.php" method="POST">
 Username:<br><input type="text" placeholder="Username..." name="username" value="<?php if(isset($username)) echo $username; ?>"><br><br>
 Password:<br><input type="password" placeholder="Password..." name="password" ><br><br>
