@@ -36,9 +36,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" />
     <title>Document</title>
+    <h1 style="text-align:center;">Home Page</h1>
      <style type="text/css">
-        body {background-color:green;}
+        body {background-color:lawngreen;}
     </style>
 </head>
 <body>
