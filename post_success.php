@@ -7,11 +7,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" />
     <title>Document</title>
     <h1 style="text-align:center;">Post Confirmation</h1>
-     <style type="text/css">
+    <style type="text/css">
         body {background-color:lawngreen;}
     </style>
 </head>
 <body>
+    
+<p align="right"><a href="homepage.php" style="color:red; text-decoration:none;">Home</a></p>
 You're post was 
 <?php
 

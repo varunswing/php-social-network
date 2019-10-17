@@ -24,14 +24,27 @@
             echo 'You must supply a username and password.';
         }
     }
-
 ?>
 
-<form action="<?php echo $current_file; ?>" method="POST">
-<h1 style="text-align:center;" >Login Page</h1>
-<p style="text-align:left;"> Username:<input type="text" placeholder="Username..." name="username"> </p>
-<p style="text-align:left;">Passowrd: <input type="password" placeholder="Password..." name="password"><br><br>
-<p style="text-align:left;"><input type="submit" value="Log in">
-<h6 style="text-align:left;">Didn't have an account</h6>
-<h6 style="text-align:left;"><a href="register.php" style="text-decoration:none;">Create new account </a></h6>
-</form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style type="text/css">
+        body {background-color:lawngreen;}
+    </style>
+</head>
+<body>
+    <form action="<?php echo $current_file; ?>" method="POST">
+    <h1 style="text-align:center;" >Login Page</h1>
+    <p style="text-align:left;"> Username:<input type="text" placeholder="Username..." name="username"> </p>
+    <p style="text-align:left;">Passowrd: <input type="password" placeholder="Password..." name="password"><br><br>
+    <p style="text-align:left;"><input type="submit" value="Log in">
+    <h6 style="text-align:left;">Didn't have an account</h6>
+    <h6 style="text-align:left;"><a href="register.php" style="text-decoration:none;">Create new account </a></h6>
+    </form>
+</body>
+</html>

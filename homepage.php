@@ -26,7 +26,7 @@
             }
         }
     }else{
-        echo 'Please log in first.';
+        echo 'Please log in first.<a href="login.php">Log In</a>';
     }
 ?>
 
@@ -44,14 +44,23 @@
     </style>
 </head>
 <body>
+<a href = "frame1.html" style="text-decoration:none;">1.Frame1</a><br>
+<a href = "frame2.html" style="text-decoration:none;">2.Frame2</a><br>
+<a href = "frame3.html" style="text-decoration:none;">3.Frame3</a><br>
+<a href = "frame4.html" style="text-decoration:none;">4.Frame4</a><br>
+<a href = "index2.html" style="text-decoration:none;">5.Swachh Bharat Abhiyan</a><br>
+<a href = "index3.html" style="text-decoration:none;">6.Feedback From</a><br>
+<a href = "index10.html" style="text-decoration:none;">7.Pattern1</a><br>
+<a href = "index11.html" style="text-decoration:none;">8.Pattern2</a><br>
+<a href = "index13.html" style="text-decoration:none;">9.Pattern3</a><br><br><br>
 
 <form action="homepage.php" method="POST">
-    Title:<br><textarea name="title" id="" cols="10" rows="1" placeholder="Title..." maxlength="255"></textarea><br><br>
-    Post:<br><textarea name="body" id="" cols="25" rows="10" placeholder="Content of your post..." maxlength="1000"></textarea>
+    Title:<br><textarea name="title" id="" cols="10" rows="1" placeholder="Title Number..." maxlength="255"></textarea><br><br>
+    Post:<br><textarea name="body" id="" cols="25" rows="10" placeholder="Suggestion..." maxlength="1000"></textarea>
     <input type="file" value="Post"><br><br>
     <input type="submit" value="Post">
 </form>
-    
+<p align="right"><a href = "logout.php" style="text-decoration:none;">Logout</a></p>
 </body>
 </html>
 

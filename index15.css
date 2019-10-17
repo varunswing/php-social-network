@@ -1,0 +1,7 @@
+input{
+    display: inline-block;
+}
+p{
+    display: inline-block;
+    width: 100px;
+}

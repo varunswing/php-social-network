@@ -1,0 +1,68 @@
+<!Doctype html>
+<html>
+<head>
+   <style>
+       .d1 .d2{
+	     width:200px;
+		 height:200px;
+		 background-color:#ff7088;
+		 border-radius:50%;
+		 animaton-name:a1;
+		 animation-duration:2s;
+		 position:absolute;
+		 -webkit-animation-name:a1;
+		 -webkit-animation-duration:2s;
+		 }
+	   .d1 .d3{
+	     width:100px;
+		 height:100px;
+		 background-color:cyan;
+		 border-radius:50%;
+		 animation-name:b1;
+		 animation-duration:2s;
+		 -webkit-animation-name:b1;
+		 -webkit-animation-duration:2s;
+		 float:right;
+		 }
+		 @keyframes a1{
+	     0%{
+		    margin-left:0%;
+			}
+	     100%{
+		    margin-left:31%;
+			}
+		}
+	    @-weblkit-keyframes a1{
+	     0%{
+		    margin-left:0%;
+			}
+	     100%{
+		    margin-left:31%;
+			}
+		}
+	   @keyframes b1{
+	     0%{
+		    margin-right:0%;
+			}
+		100%{
+		    margin-right:50%;
+			}
+		}	   
+		@-webkit-keyframes b1{
+	     0%{
+		    margin-right:0%;
+			}
+	     100%{
+		    margin-right:50%;
+			}
+		}	   
+   </style>
+</head>
+<body>
+      <div class="d1">
+       <div class="d2"></div>
+	   <div class="d3"></div>
+	  </div>
+ </body>
+ </html>
+  
